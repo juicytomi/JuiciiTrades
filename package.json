@@ -1,0 +1,21 @@
+{
+  "name": "memorymatch-intercom",
+  "version": "1.0.0",
+  "description": "P2P Memory Card Game built on Intercom / Trac Network",
+  "main": "index.js",
+  "type": "module",
+  "pear": {
+    "name": "MemoryMatch",
+    "type": "terminal"
+  },
+  "scripts": {
+    "start": "pear run --tmp-store --no-pre . --peer-store-name admin --msb-store-name admin-msb --subnet-channel memorymatch-v1",
+    "solo": "pear run --tmp-store --no-pre . --solo --peer-store-name solo --msb-store-name solo-msb --subnet-channel memorymatch-solo"
+  },
+  "dependencies": {
+    "trac-peer": "latest"
+  },
+  "overrides": {
+    "trac-wallet": "1.0.1"
+  }
+}
